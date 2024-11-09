@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/python-web-ide/' : '/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -29,5 +30,17 @@ export default defineConfig({
         additionalData: `@use "@/styles/variables" as *;`
       }
     }
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    sourcemap: false
   }
 })
