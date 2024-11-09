@@ -1,0 +1,23 @@
+// 颜色
+$primary-color: #409EFF;
+$success-color: #67C23A;
+$warning-color: #E6A23C;
+$danger-color: #F56C6C;
+$info-color: #909399;
+
+// 文字
+$font-size-base: 14px;
+$font-size-large: 16px;
+$font-size-small: 13px;
+
+// 布局
+$header-height: 60px;
+$sidebar-width: 200px;
+
+:export {
+  primaryColor: $primary-color;
+  successColor: $success-color;
+  warningColor: $warning-color;
+  dangerColor: $danger-color;
+  infoColor: $info-color;
+} 
